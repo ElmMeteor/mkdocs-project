@@ -1,0 +1,52 @@
+site_name: 资料文档
+
+nav:
+  - Home: index.md
+  - MkDocs:
+    - 概要: mkDocs/mkdocs-overview.md
+    - 新建 MkDocs 项目: mkDocs/mkdocs-new.md
+    - 新建网页: mkDocs/mkdocs-page.md
+    - 关键字:
+      - docs:
+        - 标题 "#": mkDocs/pageKeyword/docs/hash.md
+        - 图片 image : mkDocs/pageKeyword/docs/image.md
+        - 代码块 ```: mkDocs/pageKeyword/docs/code-block.md
+      - mkdocs.yml:
+        - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
+    - 开发工具:
+      - 启动脚本: mkDocs/pageTool/mkdocs-script.md
+
+theme:
+  name: material
+  features:
+    # -------------------------------
+    # 顶部导航栏 Tabs（你需要）
+    # -------------------------------
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.copy  # 这个特性会添加复制按钮
+
+    # -------------------------------
+    # 内容区域 Tabs（你更需要）
+    # -------------------------------
+    - content.tabs
+    - content.admonition
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - attr_list       # ✅ 必须启用
+
+  # -------------------------------
+  # 内容区域 Tabs 的核心，缺了就不会生效
+  # -------------------------------
+  - pymdownx.superfences
+  - pymdownx.details      # ← 加上这行：解析 ???+ 折叠块
+  - pymdownx.tabbed:
+      alternate_style: true  # 可选：使用交替样式
+      slugify: !!python/name:pymdownx.slugs.uslugify  # 更好的标题处理
+extra_css:
+  - mkDocs/assets/stylesheets/extra.css
