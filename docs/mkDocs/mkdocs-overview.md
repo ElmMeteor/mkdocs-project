@@ -21,3 +21,8 @@ MkDocs 是一个用来“把 Markdown 文档自动生成网站”的工具。
 <h2>说明</h2>
 
 本次Mkdocs编辑工具：vscode
+
+**相关链接：**  
+- [Markdown 官方语法：Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+- [MkDocs Material 官方站](https://squidfunk.github.io/mkdocs-material/reference/formatting/)
+- [Markdown 进阶语法教程](https://daringfireball.net/projects/markdown/syntax#em)
