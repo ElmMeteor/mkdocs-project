@@ -84,3 +84,12 @@
 
 !!! tip "小贴士"
     Tabs 语法尤其适合编写面向多平台、多人群的教程和说明文档，无需重复内容，让界面更整洁友好！
+
+---
+
+## 相关链接
+
+- [Material for MkDocs | Tabs 官方说明（Admonitions/Tabs）](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#tabs)
+- [Material for MkDocs | 进阶 Tabs 用法示例](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)
+- [pymdown-extensions 扩展包文档](https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/)
+- [官方示例仓库：mkdocs-material-examples](https://github.com/squidfunk/mkdocs-material-examples)

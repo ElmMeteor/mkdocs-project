@@ -10,9 +10,10 @@ nav:
       - docs:
         - 标题 "#": mkDocs/pageKeyword/docs/hash.md
         - 星号 "*": mkDocs/pageKeyword/docs/star.md
-        - 图片 image : mkDocs/pageKeyword/docs/image.md        
-        - 方括号 []: mkDocs/pageKeyword/docs/brackets.md   
-        - 代码块 ```: mkDocs/pageKeyword/docs/code-block.md   
+        - 图片 image : mkDocs/pageKeyword/docs/image.md
+        - 管道符 |: mkDocs/pageKeyword/docs/pipe.md
+        - 方括号 []: mkDocs/pageKeyword/docs/brackets.md
+        - 代码块 ```: mkDocs/pageKeyword/docs/codeBlock.md
         - 提示块语法 !!!: mkDocs/pageKeyword/docs/admonition.md
         - 多标签语法 ===: mkDocs/pageKeyword/docs/tabs.md
         - 可折叠提示块 ???: mkDocs/pageKeyword/docs/collapsible.md

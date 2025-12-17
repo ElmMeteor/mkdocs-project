@@ -94,7 +94,7 @@
 
             在 `mkdocs.yml` 里引入这个 CSS。
         === "效果"
-            ![图示](../../../mkDocs/img/MkDocs_navigation_1.png)
+            ![图示](../../../mkDocs/img/MkDocs_admonition_1.png)
 
 === "嵌套内容"
     !!! tip "嵌套块演示"

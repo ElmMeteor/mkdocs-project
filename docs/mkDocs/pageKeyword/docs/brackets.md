@@ -113,7 +113,7 @@
 === "脚注进阶"
     !!! example "注脚使用说明"
 
-        [查看脚注用法与分辨](footnote.md)
+        [查看脚注用法与分辨](brackets-footnote.md)
 
 === "引用式任务清单"
     !!! example
