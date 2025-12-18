@@ -1,21 +1,30 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs to GitHub Pages   # 本次 GitHub Actions 工作流的名称
 
 on:
   push:
     branches:
-      - main
+      - main     # 只要向 main 分支 push 代码，就会自动触发这个工作流
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
+  deploy:        # 整个流程名为 deploy（你也可以自定义）
+    runs-on: ubuntu-latest    # 在 GitHub 云端提供的最新 Ubuntu Linux 容器中执行
+    steps:                   # 下方为需要一步步执行的所有 task（步骤）
+
       - uses: actions/checkout@v4
+        # 步骤1：将你仓库的全部代码拉取到云端 runner 本地目录（没有这步，后续操作都找不到代码）
 
       - uses: actions/setup-python@v4
         with:
           python-version: 3.11
+        # 步骤2：在runner里安装并启用Python 3.11
+        #      这能确保环境与本地兼容，后续 pip/mkdocs 可正常运行
 
       - run: |
           pip install mkdocs mkdocs-material
+        # 步骤3：在云端环境中用 pip 安装 MkDocs 及其主题插件（如 mkdocs-material）
+        #      如有更多插件或依赖，可在此一并添加 pip install 命令
 
       - run: mkdocs gh-deploy --force
+        # 步骤4：执行 mkdocs gh-deploy --force 命令
+        #      自动构建 docs 并推送到 gh-pages 分支，完成 GitHub Pages 自动发布
+        #      --force 参数为强制覆盖远端 gh-pages 分支
