@@ -1,29 +1,37 @@
 # 自动启动脚本
 
-MkDocs测试，需要后台启动测试`mkdocs serve`之后，打开浏览器，手动输入URL，显示最新页面  
-且，关闭页面时，无法自动关闭后台运行的端口，需手动查询之后，再进行关闭，十分不便  
-此时，可以使用以下脚本，在测试时自动打开网页，无需手动输入 URL。
+在 MkDocs 文档开发测试时，通常需要先用后台命令 `mkdocs serve` 启动服务，再手动输入 URL 打开浏览器查看内容。页面关闭后，后台服务器还会继续占用端口，需要手动查找并关闭进程，操作不便。
 
-* 首先安装 wslview（wslu）
-    ```
+本文提供两个可选的自动启动浏览器脚本，助你方便测试，无需手动输入 URL。其中 Python 方案可方便关闭进程，推荐使用。
+
+---
+
+## 依赖项安装
+
+建议在 WSL 环境下操作。  
+
+1. 安装 `wslview`（来自 wslu 工具集，用于在 Windows 中打开 URL）：
+    ```bash
     sudo apt update
     sudo apt install wslu
     ```
-* 安装后确认
-    ```
+2. 检查是否安装成功：
+    ```bash
     which wslview
     ```
+    若能输出路径即为安装成功。
 
-下面有两个自动启动测试网页的脚本，可自行选择
+---
 
-=== "serve.py(Python 脚本)"
-    ```
+=== "脚本一：serve.py（推荐 / 自动释放端口）"
+
+    ```python
     import subprocess
     import time
     import sys
     import shutil
 
-    PORT = [端口地址](eg:8206)
+    PORT = 8206  # 替换成你希望使用的端口号，例如 8206
 
     # 检查 wslview 是否存在
     if shutil.which("wslview") is None:
@@ -42,29 +50,36 @@ MkDocs测试，需要后台启动测试`mkdocs serve`之后，打开浏览器，
     # 阻塞等待 MkDocs 结束
     proc.wait()
     ```
-    * 在 `.vscode/launch.json` 中创建任务：
-        ```
-        {
-            "version": "0.2.0",
-            "configurations": [
-                {
-                    "name": "Python: MkDocs Serve",
-                    "type": "python",
-                    "request": "launch",
-                    "program": "${workspaceFolder}/serve.py",
-                    "console": "integratedTerminal"
-                }
-            ]
-        }
-        ```
-    > 使用 Python 调试器调试（F5）或 `python serve.py` 即可启动测试  
-      ![图示](../../mkDocs/img/MkDocs_Script_1.png)  
-    > Ctrl+C 或停止按钮退出测试，端口自动释放
 
-=== "serve.sh(Bash 脚本)"
-    **此脚本无法自动关闭后台端口，需手动关闭**
-    
+    #### **集成到 VSCode 调试器**
+
+    在 `.vscode/launch.json` 添加如下配置，用于一键调试：
+
+    ```json
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: MkDocs Serve",
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder}/serve.py",
+                "console": "integratedTerminal"
+            }
+        ]
+    }
     ```
+
+    **使用方法：**  
+    - 运行 `python serve.py` 或通过 VSCode 的 F5 快捷键直接调试，即可自动启动 MkDocs 并打开页面  
+    - 停止调试或 Ctrl+C 结束，端口会自动释放，无需手动查杀进程  
+    -  
+    ![图示](../../mkDocs/img/MkDocs_Script_1.png)
+
+
+=== "脚本二：serve.sh（简单 Bash 版 / 端口需手动释放）"
+
+    ```bash
     #!/bin/bash
 
     # -----------------------------
@@ -72,7 +87,7 @@ MkDocs测试，需要后台启动测试`mkdocs serve`之后，打开浏览器，
     # -----------------------------
 
     # 配置端口
-    PORT=[端口地址](eg:8206)
+    PORT=8206  # 替换为你想要使用的端口号
 
     # 检查 wslview 是否安装
     if ! command -v wslview &> /dev/null
@@ -81,7 +96,7 @@ MkDocs测试，需要后台启动测试`mkdocs serve`之后，打开浏览器，
         exit 1
     fi
 
-    # 启动 MkDocs serve（前台运行）
+    # 启动 MkDocs serve（后台运行）
     echo "启动 MkDocs serve 在端口 $PORT ..."
     mkdocs serve -a 127.0.0.1:$PORT &
 
@@ -94,23 +109,37 @@ MkDocs测试，需要后台启动测试`mkdocs serve`之后，打开浏览器，
     # 自动在 Windows 浏览器打开
     wslview http://127.0.0.1:$PORT
 
-    # 等待 MkDocs 前台运行（阻塞终端）
+    # 等待 MkDocs 服务结束（可 Ctrl+C 终止，但端口进程不会自动回收）
     wait $MKDOCS_PID
     ```
-    * 给予执行权限(只需第一次启动前执行)
+
+    **首次使用前给予执行权限：**
+    ```bash
+    chmod +x serve.sh
+    ```
+
+    **启动测试：**
+    ```bash
+    ./serve.sh
+    ```
+
+    **如需手动关闭端口：**
+
+    1. 查询占用端口进程
+        ```bash
+        lsof -i :8206    # 替换为你的端口号
         ```
-        chmod +x serve.sh
-        ```
-    * 启动测试
-        ```
-        ./serve.sh
-        ```
-    * 查找占用端口的进程
-        ```
-        lsof -i :[端口地址](eg:8000)
-        ```
-    * 关闭启动中的端口
-        ```
-        kill [启动中的进程码](eg:45631)
+    2. 结束进程
+        ```bash
+        kill <PID>
         ```
 
+---
+
+## 建议
+
+- **推荐使用 Python 脚本**：方便集成到 VSCode，Ctrl+C 停止时端口自动释放，无需手动杀进程；
+- Bash 脚本没有自动管理后台端口功能，适合简单场景；
+- 记得根据实际端口修改 `PORT` 变量。
+
+---

@@ -128,28 +128,6 @@
 
 ---
 
-<h2>进阶与实用技巧</h2>
-
-=== "表格嵌套、数学表达"
-    !!! example "数学绝对值符号"
-        - 行内公式 \|x\| 表示绝对值
-        - MkDocs Material 配合 pymdownx.superfences，可渲染 LaTeX 数学表达，如：
-            ```
-            $|x| \geq 0$
-            ```
-            效果：$|x| \geq 0$
-
-=== "Shell/编程管道"
-    !!! example
-        - Bash/Shell 里管道： `ps aux | grep python | less`
-        - JavaScript、Python 现代语法也可用管道（见 pipe operator 提案）
-
-        ```
-        some_func() | another_func()
-        ```
-
----
-
 <h2>FAQ</h2>
 
 ??? warning "末尾少一个 | 会怎样？"
