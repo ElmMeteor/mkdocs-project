@@ -87,7 +87,7 @@
 
 ---
 
-## 相关链接
+<h2>相关链接</h2>
 
 - [Material for MkDocs | Tabs 官方说明（Admonitions/Tabs）](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#tabs)
 - [Material for MkDocs | 进阶 Tabs 用法示例](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)

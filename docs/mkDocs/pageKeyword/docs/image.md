@@ -11,10 +11,10 @@
 
 === "code"
     ```markdown
-    [标题图片](../../../mkDocs/img/MkDocs_image_1.png)
+    [标题图片](/mkDocs/assets/images/MkDocs_image_1.png)
     ```
 === "view"
-    [标题图片](../../../mkDocs/img/MkDocs_image_1.png)
+    [标题图片](/mkDocs/assets/images/MkDocs_image_1.png)
 
 <hr style="border-top: 2px solid #e40e0eff; margin: 24px 0;">
 
@@ -31,10 +31,10 @@
 
 === "code"
     ```markdown
-    ![标题图片](../../../mkDocs/img/MkDocs_image_1.png)
+    ![标题图片](/mkDocs/assets/images/MkDocs_image_1.png)
     ```
 === "view"
-    ![标题图片](../../../mkDocs/img/MkDocs_image_1.png)
+    ![标题图片](/mkDocs/assets/images/MkDocs_image_1.png)
 
 <hr style="border-top: 2px solid #e40e0eff; margin: 24px 0;">
 
@@ -57,7 +57,7 @@
 
     === "code"
         ```html
-        <img src="../../../mkDocs/img/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
+        <img src="/mkDocs/assets/images/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
         ```
 
         ```css
@@ -68,7 +68,7 @@
         }
         ```
     === "view"
-        <img src="/mkDocs/img/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
+        <img src="/mkDocs/assets/images/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
         <br>
         **※ 当同时在 `<img>` 标签上使用 `width`/`height` 属性和 CSS 类设置宽高时，CSS 通常会覆盖标签属性的值。这里 css 设置的 height 覆盖了标签内 height。**
 
@@ -81,7 +81,7 @@
 
     === "code"
         ```markdown
-        ![说明](../../../mkDocs/img/MkDocs_image_1.png){.inline-icon}
+        ![说明](/mkDocs/assets/images/MkDocs_image_1.png){.inline-icon}
         ```
         ```css
         .inline-icon {
@@ -91,7 +91,7 @@
         }
         ```
     === "view"
-        ![说明](../../../mkDocs/img/MkDocs_image_1.png){.inline-icon}
+        ![说明](/mkDocs/assets/images/MkDocs_image_1.png){.inline-icon}
 
 ---
 

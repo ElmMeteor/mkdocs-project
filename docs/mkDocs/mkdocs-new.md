@@ -31,7 +31,7 @@
     http://127.0.0.1:8000/
     ```
 **显示页面，环境构筑完毕**
-![图示](img/MkDocs_New_1.png)
+![图示](/mkDocs/assets/images/MkDocs_New_1.png)
 
 <h3>关闭启动中的端口</h3>
 

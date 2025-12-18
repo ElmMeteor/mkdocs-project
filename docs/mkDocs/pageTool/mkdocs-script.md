@@ -70,9 +70,8 @@
 
     **使用方法：**  
     - 运行 `python serve.py` 或通过 VSCode 的 F5 快捷键直接调试，即可自动启动 MkDocs 并打开页面  
+    <img src="/mkDocs/assets/images/MkDocs_Script_1.png" style="width:20%"/>  
     - 停止调试或 Ctrl+C 结束，端口会自动释放，无需手动查杀进程  
-    -  
-    ![图示](../../mkDocs/img/MkDocs_Script_1.png)
 
 
 === "脚本二：serve.sh（简单 Bash 版 / 端口需手动释放）"

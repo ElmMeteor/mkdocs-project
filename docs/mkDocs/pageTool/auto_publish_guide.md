@@ -69,12 +69,12 @@
 <h2>步骤三：赋予 Actions 写权限</h2>
 
 1. 打开你的仓库主页，点击 Settings  
-   <img src="../../../mkDocs/img/MkDocs_auto_publish_guide_1.png" style="width:50%"/>
+   <img src="/mkDocs/assets/images/MkDocs_auto_publish_guide_1.png" style="width:50%"/>
 2. 左侧选择 “Actions” → “General”  
-   <img src="../../../mkDocs/img/MkDocs_auto_publish_guide_2.png" style="width:20%"/>
+   <img src="/mkDocs/assets/images/MkDocs_auto_publish_guide_2.png" style="width:20%"/>
 3. 下拉找到**Workflow permissions**  
 4. 勾选 `Read and write permissions`（默认只有读权限，必须切换为可写），保存设置  
-   <img src="../../../mkDocs/img/MkDocs_auto_publish_guide_3.png" style="width:50%"/>
+   <img src="/mkDocs/assets/images/MkDocs_auto_publish_guide_3.png" style="width:50%"/>
 
 ---
 

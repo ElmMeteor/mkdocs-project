@@ -58,4 +58,4 @@ markdown_extensions:
       alternate_style: true  # 可选：使用交替样式
       slugify: !!python/name:pymdownx.slugs.uslugify  # 更好的标题处理
 extra_css:
-  - mkDocs/assets/stylesheets/extra.css
+  - mkDocs/assets/stylesheets/image.css
