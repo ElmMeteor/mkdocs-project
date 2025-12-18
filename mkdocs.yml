@@ -20,7 +20,8 @@ nav:
       - mkdocs.yml:
         - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
     - 开发工具:
-      - 启动脚本: mkDocs/pageTool/mkdocs-script.md
+      - 自动启动脚本: mkDocs/pageTool/mkdocs-script.md
+      - 自动发布脚本: mkDocs/pageTool/auto_publish_guide.md
 
 theme:
   name: material
