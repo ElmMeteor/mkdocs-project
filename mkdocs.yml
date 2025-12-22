@@ -19,12 +19,39 @@ nav:
         - 可折叠提示块 ???: mkDocs/pageKeyword/docs/collapsible.md
       - mkdocs.yml:
         - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
+        - 主题配色 scheme: mkDocs/pageKeyword/mkdocs/colorGuide.md
     - 开发工具:
       - 自动启动脚本: mkDocs/pageTool/mkdocs-script.md
       - 自动发布脚本: mkDocs/pageTool/auto_publish_guide.md
 
 theme:
   name: material
+  palette:
+  # =========================
+  # Light mode（白天模式）
+  # =========================
+  - media: "(prefers-color-scheme: light)" # 当用户的操作系统、浏览器“偏好配色方案”为“浅色模式”时（比如 Windows/Mac 设置了浅色主题，或者浏览器是浅色）
+                                           # 就用这套配色（scheme: default）；
+    scheme: default           # 颜色方案：default = 浅色主题
+    primary: custom           # 主色（Header、导航栏、主按钮）
+                              # custom 表示使用自定义 CSS 变量
+    accent: custom            # 点缀色（链接、高亮、选中状态）
+                              # 同样由 CSS 中的自定义变量控制
+    toggle:
+      icon: material/brightness-7  # 模式切换按钮图标（太阳）
+      name: 白天模式               # 鼠标悬停时显示的名称
+
+  # =========================
+  # Dark mode（夜晚模式）
+  # =========================
+  - media: "(prefers-color-scheme: dark)" # 当偏好为暗色/夜间模式时，就自动切换到 scheme: slate（深色）。
+    scheme: slate             # 颜色方案：slate = 深色主题
+    primary: custom           # 主色（来自 [data-md-color-scheme="slate"]）
+    accent: custom            # 点缀色（来自深色主题 CSS）
+    toggle:
+      icon: material/brightness-4  # 模式切换按钮图标（月亮）
+      name: 夜晚模式               # 鼠标悬停时显示的名称
+    
   features:
     # -------------------------------
     # 顶部导航栏 Tabs（你需要）
@@ -53,9 +80,10 @@ markdown_extensions:
   # 内容区域 Tabs 的核心，缺了就不会生效
   # -------------------------------
   - pymdownx.superfences
-  - pymdownx.details      # ← 加上这行：解析 ???+ 折叠块
+  # - pymdownx.details      # ← 加上这行：解析 ???+ 折叠块
   - pymdownx.tabbed:
       alternate_style: true  # 可选：使用交替样式
       slugify: !!python/name:pymdownx.slugs.uslugify  # 更好的标题处理
 extra_css:
+  - extra.css
   - mkDocs/assets/stylesheets/image.css
