@@ -160,12 +160,15 @@ theme:
   --md-accent-fg-color--light:  #48482D;  /* 强调色浅色 */
   --md-accent-fg-color--dark:   #333126;  /* 强调色深色 */
 
-    /* 页面默认背景色 */
+  /* 页面默认背景色 */
   --md-default-bg-color:        #f7f8fa;
 }
 
+/* h1标题颜色 */
+[data-md-color-scheme="default"] .md-typeset h1 { color: #48482D; }
+
 ```
-> 建议所有色系配套设置 light/dark 变体，层次更佳！
+> 还可以通过.md-typeset 来自定义标签的对应颜色
 
 ---
 
@@ -186,6 +189,9 @@ theme:
   --md-accent-fg-color:         #636309;  /* 默认强调色 */
   --md-accent-fg-color--light:  #E2E788;  /* 强调色浅色 */
   --md-accent-fg-color--dark:   #E6E4BF;  /* 强调色深色 */
+
+  /* 页面顶栏文字 */
+  --md-primary-bg-color: #1E2129;
 }
 ```
 
