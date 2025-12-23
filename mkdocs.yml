@@ -19,7 +19,8 @@ nav:
         - 可折叠提示块 ???: mkDocs/pageKeyword/docs/collapsible.md
       - mkdocs.yml:
         - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
-        - 主题配色 scheme: mkDocs/pageKeyword/mkdocs/colorGuide.md
+        - 主题配色 color: mkDocs/pageKeyword/mkdocs/colorGuide.md
+        - 字体设置 front: mkDocs/pageKeyword/mkdocs/fontGuide.md
     - 开发工具:
       - 自动启动脚本: mkDocs/pageTool/mkdocs-script.md
       - 自动发布脚本: mkDocs/pageTool/auto_publish_guide.md
@@ -80,7 +81,7 @@ markdown_extensions:
   # 内容区域 Tabs 的核心，缺了就不会生效
   # -------------------------------
   - pymdownx.superfences
-  # - pymdownx.details      # ← 加上这行：解析 ???+ 折叠块
+  - pymdownx.details      # ← 加上这行：解析 ???+ 折叠块
   - pymdownx.tabbed:
       alternate_style: true  # 可选：使用交替样式
       slugify: !!python/name:pymdownx.slugs.uslugify  # 更好的标题处理

@@ -1,5 +1,5 @@
 /* ========== 引入所需 Google 字体 ========== */
-@import url("https://fonts.googleapis.com/css2?family=McLaren&family=ZCOOL+XiaoWei&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=McLaren&family=ZCOOL+XiaoWei&display=swap"); */
 
 /* =========================
  * Light mode（默认主题）
@@ -34,4 +34,47 @@
   --md-accent-fg-color:         #636309;  /* 默认强调色 */
   --md-accent-fg-color--light:  #E2E788;  /* 强调色浅色 */
   --md-accent-fg-color--dark:   #E6E4BF;  /* 强调色深色 */
+}
+
+/* ===================================
+ * 定义自托管字体（本地加载，不依赖Google）
+ * =================================== */
+
+/* ----------- 英文字体 McLaren ----------- */
+@font-face {
+  font-family: "McLaren"; /* 字体名称，用于后续 CSS font-family 调用（注意保持一致） */
+  src: url("../../../mkDocs/assets/fonts/McLaren-Regular.ttf");   /* 指定字体文件的 Web 访问路径（以网站根为起点） */
+  font-weight: 400;                                        /* 字重：常规体，normal/regular */
+  font-style: normal;                                      /* 字体样式：常规（不是斜体） */
+}
+
+/* ----------- 中文字体 ZCOOL XiaoWei ----------- */
+@font-face {
+  font-family: "ZCOOL XiaoWei"; /* 字体名称，注意空格须与实际一致 */
+  src: url("../../../mkDocs/assets/fonts/ZCOOLXiaoWei-Regular.ttf");   /* 对应 Web 链接路径（不是相对 extra.css 的路径，而是网站根目录起） */
+  font-weight: 400;                                               /* 字重：常规体 */
+  font-style: normal;                                             /* 常规样式 */
+}
+
+/* -----------------------------------
+ * 设置全局字体变量
+ * Material for MkDocs 主题会自动读取该变量，应用为正文/标题默认字体
+ * 该语句效果是：英文优先使用 McLaren，若缺字则用 ZCOOL XiaoWei
+ * 通常浏览器会根据字符类型选择最合适的字体渲染，优先顺序由前到后
+ * ----------------------------------- */
+:root {
+  --md-text-font: "McLaren", "ZCOOL XiaoWei";
+}
+
+
+/* =============================
+ * 全局：自动实现中英分字体
+ * ============================= */
+/* 让浏览器自动按语言选择字体，McLaren 优先用于英文，ZCOOL XiaoWei 优先覆盖中文 */
+html, body, code {
+  font-family:
+    "McLaren",          /* Google 英文字体 */
+    "ZCOOL XiaoWei",    /* Google 中文字体，适配简体 */
+    "Microsoft YaHei",  /* Windows/Office 常用中文字体 fallback */
+    sans-serif;         /* 常规无衬线字体 fallback */
 }
