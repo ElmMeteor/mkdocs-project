@@ -3,11 +3,12 @@ site_name: 资料文档
 nav:
   - Home: index.md
   - MkDocs:
-    - 概要: mkDocs/mkdocs-overview.md
-    - 新建 MkDocs 项目: mkDocs/mkdocs-new.md
-    - 新建网页: mkDocs/mkdocs-page.md
-    - 关键字:
-      - docs:
+    - "📖 概要": mkDocs/mkdocs-overview.md
+    - "🆕 新建":
+      - 新建 MkDocs 项目: mkDocs/mkdocs-new.md
+      - 新建网页: mkDocs/mkdocs-page.md
+    - "🔑 关键字":
+      - "📁 docs":
         - 标题 "#": mkDocs/pageKeyword/docs/hash.md
         - 星号 "*": mkDocs/pageKeyword/docs/star.md
         - 图片 image : mkDocs/pageKeyword/docs/image.md
@@ -17,41 +18,41 @@ nav:
         - 提示块语法 !!!: mkDocs/pageKeyword/docs/admonition.md
         - 多标签语法 ===: mkDocs/pageKeyword/docs/tabs.md
         - 可折叠提示块 ???: mkDocs/pageKeyword/docs/collapsible.md
-      - mkdocs.yml:
+      - "⚙️ mkdocs.yml":
         - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
         - 主题配色 color: mkDocs/pageKeyword/mkdocs/colorGuide.md
         - 字体设置 front: mkDocs/pageKeyword/mkdocs/fontGuide.md
-    - 开发工具:
+    - "🛠️ 开发工具":
       - 自动启动脚本: mkDocs/pageTool/mkdocs-script.md
       - 自动发布脚本: mkDocs/pageTool/auto_publish_guide.md
 
 theme:
   name: material
   palette:
-  # =========================
-  # Light mode（白天模式）
-  # =========================
-  - media: "(prefers-color-scheme: light)" # 当用户的操作系统、浏览器“偏好配色方案”为“浅色模式”时（比如 Windows/Mac 设置了浅色主题，或者浏览器是浅色）
-                                           # 就用这套配色（scheme: default）；
-    scheme: default           # 颜色方案：default = 浅色主题
-    primary: custom           # 主色（Header、导航栏、主按钮）
-                              # custom 表示使用自定义 CSS 变量
-    accent: custom            # 点缀色（链接、高亮、选中状态）
-                              # 同样由 CSS 中的自定义变量控制
-    toggle:
-      icon: material/brightness-7  # 模式切换按钮图标（太阳）
-      name: 白天模式               # 鼠标悬停时显示的名称
+    # =========================
+    # Light mode（白天模式）
+    # =========================
+    - media: "(prefers-color-scheme: light)" # 当用户的操作系统、浏览器“偏好配色方案”为“浅色模式”时（比如 Windows/Mac 设置了浅色主题，或者浏览器是浅色）
+                                            # 就用这套配色（scheme: default）；
+      scheme: default           # 颜色方案：default = 浅色主题
+      primary: custom           # 主色（Header、导航栏、主按钮）
+                                # custom 表示使用自定义 CSS 变量
+      accent: custom            # 点缀色（链接、高亮、选中状态）
+                                # 同样由 CSS 中的自定义变量控制
+      toggle:
+        icon: material/brightness-7  # 模式切换按钮图标（太阳）
+        name: 白天模式               # 鼠标悬停时显示的名称
 
-  # =========================
-  # Dark mode（夜晚模式）
-  # =========================
-  - media: "(prefers-color-scheme: dark)" # 当偏好为暗色/夜间模式时，就自动切换到 scheme: slate（深色）。
-    scheme: slate             # 颜色方案：slate = 深色主题
-    primary: custom           # 主色（来自 [data-md-color-scheme="slate"]）
-    accent: custom            # 点缀色（来自深色主题 CSS）
-    toggle:
-      icon: material/brightness-4  # 模式切换按钮图标（月亮）
-      name: 夜晚模式               # 鼠标悬停时显示的名称
+    # =========================
+    # Dark mode（夜晚模式）
+    # =========================
+    - media: "(prefers-color-scheme: dark)" # 当偏好为暗色/夜间模式时，就自动切换到 scheme: slate（深色）。
+      scheme: slate             # 颜色方案：slate = 深色主题
+      primary: custom           # 主色（来自 [data-md-color-scheme="slate"]）
+      accent: custom            # 点缀色（来自深色主题 CSS）
+      toggle:
+        icon: material/brightness-4  # 模式切换按钮图标（月亮）
+        name: 夜晚模式               # 鼠标悬停时显示的名称
     
   features:
     # -------------------------------
