@@ -94,7 +94,7 @@
 
             在 `mkdocs.yml` 里引入这个 CSS。
         === "效果"
-            ![图示](/assets/images/MkDocs_admonition_1.png)
+            ![图示](../../../assets/images/MkDocs_admonition_1.png)
 
 === "嵌套内容"
     !!! tip "嵌套块演示"
@@ -108,7 +108,7 @@
             print("hello, world!")
             ```
         - 图片
-            ![logo](/assets/images/MkDocs_image_1.png)
+            ![logo](../../../assets/images/MkDocs_image_1.png)
 
 ---
 

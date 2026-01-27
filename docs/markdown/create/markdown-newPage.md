@@ -18,7 +18,7 @@ test/
 === "控制台"
     控制台输入`touch intro.md`追加文件  
 === "vscode"
-    选中`docs/`文件夹，单击<img class="inline-icon" src="/assets/images/MkDocs_Page_1.png" alt="文件追加按钮" />(文件追加按钮)，输入`intro.md`
+    选中`docs/`文件夹，单击<img class="inline-icon" src="../../../assets/images/MkDocs_Page_1.png" alt="文件追加按钮" />(文件追加按钮)，输入`intro.md`
 
 * 打开`mkdocs.yml`，找到 `nav:` 部分，添加新页面：
 ```

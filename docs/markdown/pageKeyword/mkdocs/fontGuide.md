@@ -139,7 +139,7 @@ theme:
         **第一步：下载所需字体文件（如从 [Google Fonts](https://fonts.google.com/?preview.text=McLaren)）**
 
         **第二步：将字体文件存入项目如下位置**  
-        ![字体](assets/images/MkDocs_fontGuide_1.png)
+        ![字体](../../../assets/images/MkDocs_fontGuide_1.png)
 
         **第三步：在 CSS 中声明本地字体**
         ```css

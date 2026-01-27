@@ -136,7 +136,7 @@
     - 项目一
     - 项目二
 
-        <img src="/assets/images/MkDocs_List_1.png" width="100">
+        <img src="../../../assets/images/MkDocs_List_1.png" width="100">
     - 项目三
     ```
 
@@ -144,7 +144,7 @@
     - 项目一
     - 项目二
 
-        <img src="/assets/images/MkDocs_List_1.png" width="100">
+        <img src="../../../assets/images/MkDocs_List_1.png" width="100">
     - 项目三
 
 ---

@@ -41,7 +41,7 @@
     - `#` 后需有 1 个空格再写标题内容
     - 标题级别用于构建页面结构（H1~H6 对应 HTML 标签）
 === "view"
-    ![图示](/assets/images/MkDocs_Hash_1.png)
+    ![图示](../../../assets/images/MkDocs_Hash_1.png)
 ---
 
 - `#` 后需有 1 个空格再写标题内容

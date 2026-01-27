@@ -62,7 +62,7 @@
 /* ----------- 中文字体 ZCOOL XiaoWei ----------- */
 @font-face {
   font-family: "ZCOOL XiaoWei"; /* 字体名称，注意空格须与实际一致 */
-  src: url("../assets/fonts/ZCOOLXiaoWei-Regular.ttf") format("truetype");   /* 对应 Web 链接路径（不是相对 extra.css 的路径，而是网站根目录起） */
+  src: url("assets/fonts/ZCOOLXiaoWei-Regular.ttf") format("truetype");   /* 对应 Web 链接路径（不是相对 extra.css 的路径，而是网站根目录起） */
   font-weight: 400;                                               /* 字重：常规体 */
   font-style: normal;                                             /* 常规样式 */
 }
