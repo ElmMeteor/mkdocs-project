@@ -2,29 +2,33 @@ site_name: 资料文档
 
 nav:
   - Home: index.md
-  - MkDocs:
-    - "📖 概要": mkDocs/mkdocs-overview.md
+  - Markdown:
+    - "📖概要": markdown/markdown-overview.md
     - "🆕 新建":
-      - 新建 MkDocs 项目: mkDocs/mkdocs-new.md
-      - 新建网页: mkDocs/mkdocs-page.md
-    - "🔑 关键字":
-      - "📁 docs":
-        - 标题 "#": mkDocs/pageKeyword/docs/hash.md
-        - 星号 "*": mkDocs/pageKeyword/docs/star.md
-        - 图片 image : mkDocs/pageKeyword/docs/image.md
-        - 管道符 |: mkDocs/pageKeyword/docs/pipe.md
-        - 方括号 []: mkDocs/pageKeyword/docs/brackets.md
-        - 代码块 ```: mkDocs/pageKeyword/docs/codeBlock.md
-        - 提示块语法 !!!: mkDocs/pageKeyword/docs/admonition.md
-        - 多标签语法 ===: mkDocs/pageKeyword/docs/tabs.md
-        - 可折叠提示块 ???: mkDocs/pageKeyword/docs/collapsible.md
-      - "⚙️ mkdocs.yml":
-        - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
-        - 主题配色 color: mkDocs/pageKeyword/mkdocs/colorGuide.md
-        - 字体设置 front: mkDocs/pageKeyword/mkdocs/fontGuide.md
-    - "🛠️ 开发工具":
-      - 自动启动脚本: mkDocs/pageTool/mkdocs-script.md
-      - 自动发布脚本: mkDocs/pageTool/auto_publish_guide.md
+      - 新建 MkDocs 项目: markdown/create/markdown-newProject.md
+      - 新建网页: markdown/create/markdown-newPage.md
+    - "🔑关键字":
+      - "📁docs":
+        - 标题: markdown/pageKeyword/docs/hash.md
+        - 段落/换行: markdown/pageKeyword/docs/paragraphs.md
+        - 粗体/斜体/无序列表: markdown/pageKeyword/docs/star.md
+        - 引用: markdown/pageKeyword/docs/blockquotes.md
+        - 列表: markdown/pageKeyword/docs/list.md
+        - 代码引用: markdown/pageKeyword/docs/codeBlock.md
+        - 链接: markdown/pageKeyword/docs/links.md
+        - 图片: markdown/pageKeyword/docs/image.md
+        - 注脚 [^1](扩展): markdown/pageKeyword/docs/footnote.md
+        - 文本增强(扩展): markdown/pageKeyword/docs/textEnhancement.md
+        - 提示块语法 !!!(扩展): markdown/pageKeyword/docs/admonition.md
+        - 多标签语法 ===(扩展): markdown/pageKeyword/docs/tabs.md
+        - 可折叠提示块 ???(扩展): markdown/pageKeyword/docs/collapsible.md
+      - "⚙️mkdocs.yml":
+        - 导航菜单 nav: markdown/pageKeyword/mkdocs/navigation.md
+        - 主题配色 color: markdown/pageKeyword/mkdocs/colorGuide.md
+        - 字体设置 front: markdown/pageKeyword/mkdocs/fontGuide.md
+    - "🛠️开发工具":
+      - 自动启动脚本: markdown/pageTool/mkdocs-script.md
+      - 自动发布脚本: markdown/pageTool/auto_publish_guide.md
 
 theme:
   name: material
@@ -82,10 +86,15 @@ markdown_extensions:
   # 内容区域 Tabs 的核心，缺了就不会生效
   # -------------------------------
   - pymdownx.superfences
-  - pymdownx.details      # ← 加上这行：解析 ???+ 折叠块
+  - pymdownx.details      # ← 解析 ???+ 折叠块
   - pymdownx.tabbed:
-      alternate_style: true  # 可选：使用交替样式
-      slugify: !!python/name:pymdownx.slugs.uslugify  # 更好的标题处理
+      alternate_style: true  # 使用交替样式
+      slugify: !!python/name:pymdownx.slugs.uslugify  # 标题处理
+
 extra_css:
   - extra.css
-  - mkDocs/assets/stylesheets/image.css
+  - markdown/assets/stylesheets/image.css
+
+extra_javascript:
+  - markdown/assets/js/image_fallback.js
+  - markdown/assets/js/external-links.js 

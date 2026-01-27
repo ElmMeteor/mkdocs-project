@@ -15,16 +15,16 @@
     nav:
       - Home: index.md
       - MkDocs:
-          - 概要: mkDocs/mkdocs-overview.md
-          - 新建 MkDocs 项目: mkDocs/mkdocs-new.md
-          - 新建网页: mkDocs/mkdocs-page.md
+          - 概要: markdown/mkdocs-overview.md
+          - 新建 MkDocs 项目: markdown/markdown-newProject.md
+          - 新建网页: markdown/mkdocs-newPage.md
           - 关键字:
               - docs:
-                  - 标题 '#': mkDocs/pageKeyword/docs/hash.md
+                  - 标题 '#': markdown/pageKeyword/docs/hash.md
               - mkdocs.yml:
-                  - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
+                  - 导航菜单 nav: markdown/pageKeyword/mkdocs/navigation.md
           - 开发工具:
-              - 启动脚本: mkDocs/pageTool/mkdocs-script.md
+              - 启动脚本: markdown/pageTool/mkdocs-script.md
     ```
 === "view"
     ![图示](../../assets/images/MkDocs_navigation_1.png)
@@ -59,9 +59,9 @@
       - MkDocs:
           - 关键字:
               - docs:
-                  - 标题 '#': mkDocs/pageKeyword/docs/hash.md
+                  - 标题 '#': markdown/pageKeyword/docs/hash.md
           - mkdocs.yml:
-              - 导航菜单 nav: mkDocs/pageKeyword/mkdocs/navigation.md
+              - 导航菜单 nav: markdown/pageKeyword/mkdocs/navigation.md
     ```
 === "view"
     ![图示](../../assets/images/MkDocs_navigation_2.png)

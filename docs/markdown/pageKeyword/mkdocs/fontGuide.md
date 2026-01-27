@@ -139,20 +139,20 @@ theme:
         **第一步：下载所需字体文件（如从 [Google Fonts](https://fonts.google.com/?preview.text=McLaren)）**
 
         **第二步：将字体文件存入项目如下位置**  
-        ![字体](../../../mkDocs/assets/images/MkDocs_fontGuide_1.png)
+        ![字体](../../../markdown/assets/images/MkDocs_fontGuide_1.png)
 
         **第三步：在 CSS 中声明本地字体**
         ```css
         @font-face {
           font-family: "McLaren"; /* 自定义英文字体名称 */
-          src: url("/mkDocs/assets/fonts/McLaren-Regular.ttf");   /* 网站根目录起的访问路径 */
+          src: url("/markdown/assets/fonts/McLaren-Regular.ttf");   /* 网站根目录起的访问路径 */
           font-weight: 400;
           font-style: normal;
         }
 
         @font-face {
           font-family: "ZCOOL XiaoWei"; /* 自定义中文字体名称 */
-          src: url("/mkDocs/assets/fonts/ZCOOLXiaoWei-Regular.ttf");
+          src: url("/markdown/assets/fonts/ZCOOLXiaoWei-Regular.ttf");
           font-weight: 400;
           font-style: normal;
         }
@@ -179,9 +179,8 @@ theme:
           - extra.css
         ```
 
-> **小结**：本地字体方式能保证离线和内网部署字体效果一致。注意发布网站时需将字体文件一并放在对应目录。
 ---
-
+> **小结**：本地字体方式能保证离线和内网部署字体效果一致。注意发布网站时需将字体文件一并放在对应目录。
 
 <h2>官方参考文档</h2>
 
