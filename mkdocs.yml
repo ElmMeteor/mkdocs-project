@@ -93,8 +93,8 @@ markdown_extensions:
 
 extra_css:
   - extra.css
-  - markdown/assets/stylesheets/image.css
+  - assets/stylesheets/image.css
 
 extra_javascript:
-  - markdown/assets/js/image_fallback.js
-  - markdown/assets/js/external-links.js 
+  - assets/js/image_fallback.js
+  - assets/js/external-links.js 

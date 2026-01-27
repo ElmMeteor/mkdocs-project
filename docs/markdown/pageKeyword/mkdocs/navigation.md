@@ -27,7 +27,7 @@
               - 启动脚本: markdown/pageTool/mkdocs-script.md
     ```
 === "view"
-    ![图示](../../assets/images/MkDocs_navigation_1.png)
+    ![图示](/assets/images/MkDocs_navigation_1.png)
 ---
 
 <h2>nav 编写补充说明</h2>
@@ -64,7 +64,7 @@
               - 导航菜单 nav: markdown/pageKeyword/mkdocs/navigation.md
     ```
 === "view"
-    ![图示](../../assets/images/MkDocs_navigation_2.png)
+    ![图示](/assets/images/MkDocs_navigation_2.png)
 
 ---
 

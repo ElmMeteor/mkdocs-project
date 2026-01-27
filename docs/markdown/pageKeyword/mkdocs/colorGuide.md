@@ -122,8 +122,8 @@ white
     ```
     顶部右侧会出现明暗切换开关。
 === "view"
-    <img src = "/markdown/assets/images/MkDocs_colorGuide_1.png" style = "width:30%">
-    <img src = "/markdown/assets/images/MkDocs_colorGuide_2.png" style = "width:30%">
+    <img src = "/assets/images/MkDocs_colorGuide_1.png" style = "width:30%">
+    <img src = "/assets/images/MkDocs_colorGuide_2.png" style = "width:30%">
 
 
 ---
