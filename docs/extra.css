@@ -74,7 +74,13 @@
  * 通常浏览器会根据字符类型选择最合适的字体渲染，优先顺序由前到后
  * ----------------------------------- */
 :root {
-  --md-text-font: "McLaren", "ZCOOL XiaoWei";
+  --md-text-font-family:
+    "McLaren",
+    "ZCOOL XiaoWei",
+    "Microsoft YaHei",
+    "PingFang SC",
+    "Noto Sans CJK SC",
+    sans-serif;
 }
 
 
