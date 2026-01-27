@@ -3,7 +3,7 @@ site_name: 资料文档
 nav:
   - Home: index.md
   - Markdown:
-    - "📖概要": markdown/markdown-overview.md
+    - "📖概要": markdown/index.md
     - "🆕 新建":
       - 新建 MkDocs 项目: markdown/create/markdown-newProject.md
       - 新建网页: markdown/create/markdown-newPage.md
@@ -29,6 +29,15 @@ nav:
     - "🛠️开发工具":
       - 自动启动脚本: markdown/pageTool/mkdocs-script.md
       - 自动发布网页: markdown/pageTool/auto_publish_guide.md
+  - WebDevGuidelines:
+    - "📖 概要": webDevGuidelines/index.md
+    - "📃 前端":
+      - 新建 MkDocs 项目: webDevGuidelines/frontend/index.md
+    - "📜 后端":
+      - 新建 MkDocs 项目: webDevGuidelines/backend/index.md
+    - "📄 通用":
+      - 新建 MkDocs 项目: webDevGuidelines/general/index.md
+
 
 theme:
   name: material
