@@ -139,20 +139,20 @@ theme:
         **第一步：下载所需字体文件（如从 [Google Fonts](https://fonts.google.com/?preview.text=McLaren)）**
 
         **第二步：将字体文件存入项目如下位置**  
-        ![字体](/assets/images/MkDocs_fontGuide_1.png)
+        ![字体](assets/images/MkDocs_fontGuide_1.png)
 
         **第三步：在 CSS 中声明本地字体**
         ```css
         @font-face {
           font-family: "McLaren"; /* 自定义英文字体名称 */
-          src: url("/assets/fonts/McLaren-Regular.ttf") format("truetype");   /* 网站根目录起的访问路径 */
+          src: url("assets/fonts/McLaren-Regular.ttf") format("truetype");   /* 网站根目录起的访问路径 */
           font-weight: 400;
           font-style: normal;
         }
 
         @font-face {
           font-family: "ZCOOL XiaoWei"; /* 自定义中文字体名称 */
-          src: url("/assets/fonts/ZCOOLXiaoWei-Regular.ttf") format("truetype");
+          src: url("assets/fonts/ZCOOLXiaoWei-Regular.ttf") format("truetype");
           font-weight: 400;
           font-style: normal;
         }

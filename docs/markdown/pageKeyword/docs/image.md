@@ -11,10 +11,10 @@
 
 === "code"
     ```markdown
-    [标题图片](/assets/images/MkDocs_image_1.png)
+    [标题图片](../../assets/images/MkDocs_image_1.png)
     ```
 === "view"
-    [标题图片](/assets/images/MkDocs_image_1.png)
+    [标题图片](../../assets/images/MkDocs_image_1.png)
 
 <hr style="border-top: 2px solid #e40e0eff; margin: 24px 0;">
 
@@ -31,10 +31,10 @@
 
 === "code"
     ```markdown
-    ![标题图片](/assets/images/MkDocs_image_1.png)
+    [标题图片](../assets/images/MkDocs_image_1.png)
     ```
 === "view"
-    ![标题图片](/assets/images/MkDocs_image_1.png)
+    [标题图片](../assets/images/MkDocs_image_1.png)
 
 
 ---
@@ -44,10 +44,10 @@
 !!! example "用法示例"
     === "code"
         ```markdown
-        [![Logo](/assets/images/MkDocs_image_2.png)](https://Google.com)
+        [![Logo](assets/images/MkDocs_image_2.png)](https://Google.com)
         ```
     === "view"
-        [![Logo](/assets/images/MkDocs_image_2.png){width="100" height="100"}](https://Google.com)
+        [![Logo](assets/images/MkDocs_image_2.png){width="100" height="100"}](https://Google.com)
 
     - 语法：外层用普通链接，内层用图片语法
     - 效果：点击图片跳转到指定链接
