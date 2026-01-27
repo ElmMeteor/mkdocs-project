@@ -28,7 +28,7 @@ nav:
         - 字体设置 front: markdown/pageKeyword/mkdocs/fontGuide.md
     - "🛠️开发工具":
       - 自动启动脚本: markdown/pageTool/mkdocs-script.md
-      - 自动发布脚本: markdown/pageTool/auto_publish_guide.md
+      - 自动发布网页: markdown/pageTool/auto_publish_guide.md
 
 theme:
   name: material

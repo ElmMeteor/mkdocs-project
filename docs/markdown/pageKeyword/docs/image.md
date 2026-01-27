@@ -31,10 +31,10 @@
 
 === "code"
     ```markdown
-    [标题图片](../../../assets/images/MkDocs_image_1.png)
+    ![Logo](../../../assets/images/MkDocs_image_2.png)
     ```
 === "view"
-    [标题图片](../../../assets/images/MkDocs_image_1.png)
+    ![Logo](../../../assets/images/MkDocs_image_2.png)
 
 
 ---
@@ -73,7 +73,7 @@
 
     === "code"
         ```html
-        <img src="../../../assets/images/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
+        <img src="../../../../assets/images/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
         ```
 
         ```css
@@ -84,7 +84,7 @@
         }
         ```
     === "view"
-        <img src="../../../assets/images/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
+        <img src="../../../../assets/images/MkDocs_image_1.png" alt="说明" width="10" height="10" class="inline-icon"/>
         <br>
         **※ 当同时在 `<img>` 标签上使用 `width`/`height` 属性和 CSS 类设置宽高时，CSS 通常会覆盖标签属性的值。这里 css 设置的 height 覆盖了标签内 height。**
 
