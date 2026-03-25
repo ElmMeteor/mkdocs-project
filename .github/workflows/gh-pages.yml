@@ -1,15 +1,17 @@
-name: Deploy MkDocs to GitHub Pages   # 本次 GitHub Actions 工作流的名称
+name: Deploy MkDocs to GitHub Pages # 本次 GitHub Actions 工作流的名称
 
 on:
   push:
     branches:
-      - main     # 只要向 main 分支 push 代码，就会自动触发这个工作流
+      - main # 只要向 main 分支 push 代码，就会自动触发这个工作流
+
+permissions:
+  contents: write # 允许推送到 gh-pages 分支
 
 jobs:
-  deploy:        # 整个流程名为 deploy（你也可以自定义）
-    runs-on: ubuntu-latest    # 在 GitHub 云端提供的最新 Ubuntu Linux 容器中执行
-    steps:                   # 下方为需要一步步执行的所有 task（步骤）
-
+  deploy: # 整个流程名为 deploy（你也可以自定义）
+    runs-on: ubuntu-latest # 在 GitHub 云端提供的最新 Ubuntu Linux 容器中执行
+    steps: # 下方为需要一步步执行的所有 task（步骤）
       - uses: actions/checkout@v4
         # 步骤1：将你仓库的全部代码拉取到云端 runner 本地目录（没有这步，后续操作都找不到代码）
 
