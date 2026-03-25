@@ -29,10 +29,6 @@ nav:
       - "🛠️ 开发工具":
           - 自动启动脚本: markdown/pageTool/mkdocs-script.md
           - 自动发布网页: markdown/pageTool/auto_publish_guide.md
-  - Fate:
-      - "🆕 新建":
-          - 新建 Game 项目: Game/create/createReactViteProject.md
-          - 新建 工程 介绍: Game/create/projectStructure.md
 
 theme:
   name: material
