@@ -3,41 +3,36 @@ site_name: 资料文档
 nav:
   - Home: index.md
   - Markdown:
-    - "📖概要": markdown/index.md
-    - "🆕 新建":
-      - 新建 MkDocs 项目: markdown/create/markdown-newProject.md
-      - 新建网页: markdown/create/markdown-newPage.md
-    - "🔑关键字":
-      - "📁docs":
-        - 标题: markdown/pageKeyword/docs/hash.md
-        - 段落/换行: markdown/pageKeyword/docs/paragraphs.md
-        - 粗体/斜体/无序列表: markdown/pageKeyword/docs/star.md
-        - 引用: markdown/pageKeyword/docs/blockquotes.md
-        - 列表: markdown/pageKeyword/docs/list.md
-        - 代码引用: markdown/pageKeyword/docs/codeBlock.md
-        - 链接: markdown/pageKeyword/docs/links.md
-        - 图片: markdown/pageKeyword/docs/image.md
-        - 注脚 [^1](扩展): markdown/pageKeyword/docs/footnote.md
-        - 文本增强(扩展): markdown/pageKeyword/docs/textEnhancement.md
-        - 提示块语法 !!!(扩展): markdown/pageKeyword/docs/admonition.md
-        - 多标签语法 ===(扩展): markdown/pageKeyword/docs/tabs.md
-        - 可折叠提示块 ???(扩展): markdown/pageKeyword/docs/collapsible.md
-      - "⚙️mkdocs.yml":
-        - 导航菜单 nav: markdown/pageKeyword/mkdocs/navigation.md
-        - 主题配色 color: markdown/pageKeyword/mkdocs/colorGuide.md
-        - 字体设置 front: markdown/pageKeyword/mkdocs/fontGuide.md
-    - "🛠️开发工具":
-      - 自动启动脚本: markdown/pageTool/mkdocs-script.md
-      - 自动发布网页: markdown/pageTool/auto_publish_guide.md
-  - WebDevGuidelines:
-    - "📖 概要": webDevGuidelines/index.md
-    - "📃 前端":
-      - 新建 MkDocs 项目: webDevGuidelines/frontend/index.md
-    - "📜 后端":
-      - 新建 MkDocs 项目: webDevGuidelines/backend/index.md
-    - "📄 通用":
-      - 新建 MkDocs 项目: webDevGuidelines/general/index.md
-
+      - "📖概要": markdown/index.md
+      - "🆕 新建":
+          - 新建 MkDocs 项目: markdown/create/markdown-newProject.md
+          - 新建网页: markdown/create/markdown-newPage.md
+      - "🔑 关键字":
+          - "📁docs":
+              - 标题: markdown/pageKeyword/docs/hash.md
+              - 段落/换行: markdown/pageKeyword/docs/paragraphs.md
+              - 粗体/斜体/无序列表: markdown/pageKeyword/docs/star.md
+              - 引用: markdown/pageKeyword/docs/blockquotes.md
+              - 列表: markdown/pageKeyword/docs/list.md
+              - 代码引用: markdown/pageKeyword/docs/codeBlock.md
+              - 链接: markdown/pageKeyword/docs/links.md
+              - 图片: markdown/pageKeyword/docs/image.md
+              - 注脚 [^1](扩展): markdown/pageKeyword/docs/footnote.md
+              - 文本增强(扩展): markdown/pageKeyword/docs/textEnhancement.md
+              - 提示块语法 !!!(扩展): markdown/pageKeyword/docs/admonition.md
+              - 多标签语法 ===(扩展): markdown/pageKeyword/docs/tabs.md
+              - 可折叠提示块 ???(扩展): markdown/pageKeyword/docs/collapsible.md
+          - "⚙️mkdocs.yml":
+              - 导航菜单 nav: markdown/pageKeyword/mkdocs/navigation.md
+              - 主题配色 color: markdown/pageKeyword/mkdocs/colorGuide.md
+              - 字体设置 front: markdown/pageKeyword/mkdocs/fontGuide.md
+      - "🛠️ 开发工具":
+          - 自动启动脚本: markdown/pageTool/mkdocs-script.md
+          - 自动发布网页: markdown/pageTool/auto_publish_guide.md
+  - Fate:
+      - "🆕 新建":
+          - 新建 Game 项目: Game/create/createReactViteProject.md
+          - 新建 工程 介绍: Game/create/projectStructure.md
 
 theme:
   name: material
@@ -45,35 +40,38 @@ theme:
     # =========================
     # Light mode（白天模式）
     # =========================
-    - media: "(prefers-color-scheme: light)" # 当用户的操作系统、浏览器“偏好配色方案”为“浅色模式”时（比如 Windows/Mac 设置了浅色主题，或者浏览器是浅色）
-                                            # 就用这套配色（scheme: default）；
-      scheme: default           # 颜色方案：default = 浅色主题
-      primary: custom           # 主色（Header、导航栏、主按钮）
-                                # custom 表示使用自定义 CSS 变量
-      accent: custom            # 点缀色（链接、高亮、选中状态）
-                                # 同样由 CSS 中的自定义变量控制
+    - media:
+        "(prefers-color-scheme: light)" # 当用户的操作系统、浏览器“偏好配色方案”为“浅色模式”时（比如 Windows/Mac 设置了浅色主题，或者浏览器是浅色）
+        # 就用这套配色（scheme: default）；
+      scheme: default # 颜色方案：default = 浅色主题
+      primary:
+        custom # 主色（Header、导航栏、主按钮）
+        # custom 表示使用自定义 CSS 变量
+      accent:
+        custom # 点缀色（链接、高亮、选中状态）
+        # 同样由 CSS 中的自定义变量控制
       toggle:
-        icon: material/brightness-7  # 模式切换按钮图标（太阳）
-        name: 白天模式               # 鼠标悬停时显示的名称
+        icon: material/brightness-7 # 模式切换按钮图标（太阳）
+        name: 白天模式 # 鼠标悬停时显示的名称
 
     # =========================
     # Dark mode（夜晚模式）
     # =========================
     - media: "(prefers-color-scheme: dark)" # 当偏好为暗色/夜间模式时，就自动切换到 scheme: slate（深色）。
-      scheme: slate             # 颜色方案：slate = 深色主题
-      primary: custom           # 主色（来自 [data-md-color-scheme="slate"]）
-      accent: custom            # 点缀色（来自深色主题 CSS）
+      scheme: slate # 颜色方案：slate = 深色主题
+      primary: custom # 主色（来自 [data-md-color-scheme="slate"]）
+      accent: custom # 点缀色（来自深色主题 CSS）
       toggle:
-        icon: material/brightness-4  # 模式切换按钮图标（月亮）
-        name: 夜晚模式               # 鼠标悬停时显示的名称
-    
+        icon: material/brightness-4 # 模式切换按钮图标（月亮）
+        name: 夜晚模式 # 鼠标悬停时显示的名称
+
   features:
     # -------------------------------
     # 顶部导航栏 Tabs（你需要）
     # -------------------------------
     - navigation.tabs
     - navigation.tabs.sticky
-    - content.code.copy  # 这个特性会添加复制按钮
+    - content.code.copy # 这个特性会添加复制按钮
 
     # -------------------------------
     # 内容区域 Tabs（你更需要）
@@ -95,10 +93,11 @@ markdown_extensions:
   # 内容区域 Tabs 的核心，缺了就不会生效
   # -------------------------------
   - pymdownx.superfences
-  - pymdownx.details      # ← 解析 ???+ 折叠块
+  - pymdownx.details # ← 解析 ???+ 折叠块
   - pymdownx.tabbed:
-      alternate_style: true  # 使用交替样式
-      slugify: !!python/name:pymdownx.slugs.uslugify  # 标题处理
+      alternate_style: true # 使用交替样式
+      slugify: !!python/name:pymdownx.slugs.uslugify # 标题处理
+
 
 extra_css:
   - extra.css
@@ -106,4 +105,4 @@ extra_css:
 
 extra_javascript:
   - assets/js/image_fallback.js
-  - assets/js/external-links.js 
+  - assets/js/external-links.js

@@ -34,7 +34,7 @@
     ![Logo](../../../assets/images/MkDocs_image_2.png)
     ```
 === "view"
-    ![Logo](../../../assets/images/MkDocs_image_2.png width="100")
+    ![Logo](../../../assets/images/MkDocs_image_2.png){width="100" height="100"}
 
 
 ---
